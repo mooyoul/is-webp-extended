@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Is WebP Image?</title>
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,minimum-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.2/gh-fork-ribbon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.css" type="text/css">
+
+  <style type="text/css">
+    * { box-sizing: border-box; }
+
+    body {
+      background-color: #f0f0f0;
+      transition: background-color ease 0.3s, color ease 0.3s;
+      text-align: center;
+      color: #333;
+    }
+
+    body.background-green {
+      background-color: teal;
+      color: #fff;
+    }
+
+    body.background-red {
+      background-color: lightpink;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin: 48px 0 24px;
+    }
+
+    h2 {
+      font-size: 64px;
+      margin: 0 0 40px;
+    }
+
+    .btn-default {
+      border: 0 none;
+      padding: 0 32px;
+      font-size: 32px;
+      line-height: 64px;
+    }
+
+    #dropzone {
+      width: 80%;
+      max-width: 1140px;
+      margin: 0 auto;
+      border: 2px dashed dodgerblue;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    @media (min-width: 640px) {
+      h1 {
+        font-size: 96px;
+        margin: 48px 0 24px;
+      }
+      h2 {
+        font-size: 128px;
+        margin: 0 0 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+<a class="github-fork-ribbon" href="http://github.com/mooyoul/is-webp-extended" title="Fork me on GitHub" data-ribbon="Fork me on GitHub">Fork me on GitHub</a>
+<h1>is WebP Image?</h1>
+<h2 id="result-text">Well...</h2>
+<form action="fake" id="dropzone" class="dropzone">
+  <div class="fallback">
+    <input name="file" type="file">
+  </div>
+</form>
+<button type="button" class="btn-default hide" id="reset-button" onclick="reset()">Try Again</button>
+<script type="text/javascript" src="../index.js"></script>
+<script type="text/javascript">
+  const { isWebP, isAnimatedWebP } = isWebPExtended;
+  function onFileSelected(file) {
+    document.querySelector("#dropzone").classList.add("hide");
+    document.querySelector("#reset-button").classList.remove("hide");
+
+    isWebP(file).then((v) => {
+      if (!v) {
+        return Promise.resolve({ isWebP: false });
+      }
+
+      return isAnimatedWebP(file).then((v) => Promise.resolve({
+        isWebP: true,
+        isAnimatedWebP: v,
+      }));
+    }).then((v) => {
+      let resultText = "NO.";
+
+      if (v.isWebP) {
+        resultText = v.isAnimatedWebP ? "Yes, and animated!" : "Yes. but not animated.";
+      }
+
+
+      document.querySelector("#result-text").innerText = resultText;
+      document.body.classList.add(v.isWebP ? "background-green" : "background-red");
+    }).catch((e) => {
+      console.error(e);
+    });
+
+  }
+
+  function reset() {
+    document.querySelector("#result-text").innerText = "Well...";
+    document.querySelector("#reset-button").classList.add("hide");
+    document.querySelector("#dropzone").classList.remove("hide");
+    document.body.classList.remove("background-green", "background-red");
+  }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.4.0/min/dropzone.min.js"></script>
+<script type="text/javascript">
+  Dropzone.autoDiscover = false;
+  const dropzone = new Dropzone("#dropzone", {
+    maxFiles: 1,
+    autoQueue: false,
+    autoProcessQueue: false,
+    createImageThumbnails: false,
+  });
+
+  dropzone.on("addedfile", (file) => {
+    onFileSelected(file);
+    dropzone.removeFile(file);
+  });
+</script>
+</body>
+</html>
