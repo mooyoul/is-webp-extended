@@ -8,6 +8,9 @@ addons:
       - google-chrome
     packages:
       - google-chrome-stable
+script:
+- npm run lint
+- npm test
 deploy:
   provider: npm
   email: mooyoul@gmail.com
