@@ -1,3 +1,4 @@
+const path = require("path");
 const { expect } = intern.getPlugin("chai");
 const { registerSuite } = intern.getInterface("object");
 
@@ -6,7 +7,7 @@ registerSuite("is-webp-extended", {
     await this.remote
       .get("test.html")
       .findById("input")
-      .type("fixture.webp")
+      .type(path.resolve("fixture.webp"))
       .end()
       .sleep(1000);
 
