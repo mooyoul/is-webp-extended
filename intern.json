@@ -3,7 +3,14 @@
   "functionalSuites": "test.*.js",
   "environments": [
     {
-      "browser": "chrome"
+      "browserName": "chrome",
+      "chromeOptions": {
+        "args": [
+          "headless",
+          "disable-gpu"
+        ]
+      },
+      "fixSessionCapabilities": false
     }
   ]
 }
