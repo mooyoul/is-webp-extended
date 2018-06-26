@@ -4,7 +4,7 @@
   "environments": [
     {
       "browserName": "chrome",
-      "chromeOptions": {
+      "goog:chromeOptions": {
         "args": [
           "headless",
           "disable-gpu",
