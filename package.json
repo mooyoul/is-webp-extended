@@ -16,7 +16,7 @@
   "scripts": {
     "clean": "rm -f index.d.ts index.js index.js.map",
     "build": "npm run clean && rollup -c rollup.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "intern"
   },
   "repository": {
     "type": "git",
