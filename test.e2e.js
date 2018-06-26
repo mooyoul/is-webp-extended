@@ -9,7 +9,7 @@ registerSuite("is-webp-extended", {
       .findById("input")
       .type(path.resolve("fixture.webp"))
       .end()
-      .sleep(1000);
+      .sleep(5000);
 
     const isWebPText = await this.remote
       .findById("isWebP")
