@@ -1,0 +1,9 @@
+{
+  "proxyPort": 9000,
+  "functionalSuites": "test.*.js",
+  "environments": [
+    {
+      "browser": "chrome"
+    }
+  ]
+}

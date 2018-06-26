@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "es2015",
+        "target": "es6",
+        "noImplicitAny": true,
+        "declaration": true,
+        "sourceMap": true,
+        "outDir": "lib",
+        "strictNullChecks": true,
+        "types": ["intern"]
+    },
+    "include": [
+        "index.ts"
+    ]
+}
