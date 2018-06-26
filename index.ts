@@ -60,7 +60,7 @@ function readBytes(input: File | ArrayBuffer, offset: number, size: number): Pro
       };
 
       reader.readAsArrayBuffer(
-        input.slice(offset, offset + size)
+        input.slice(offset, offset + size),
       );
     });
   }

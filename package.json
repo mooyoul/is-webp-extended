@@ -16,7 +16,10 @@
   "scripts": {
     "clean": "rm -f index.d.ts index.js index.js.map",
     "build": "npm run clean && rollup -c rollup.config.js",
-    "test": "intern"
+    "pretest": "npm run clean && npm run build",
+    "test": "intern",
+    "posttest": "npm run clean",
+    "lint": "tslint -c tslint.json index.ts"
   },
   "repository": {
     "type": "git",
