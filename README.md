@@ -14,6 +14,9 @@ If `File` is provided, package automatically handles additional requirements lik
 
 - [Vingle](https://www.vingle.net) - Vingle, Very Community. Love the things that you love. - [We're hiring!](https://careers.vingle.net/#/engineering/backend)
 
+## Demo
+
+https://mooyoul.github.com/is-webp-extended/
 
 ## Install
 
@@ -49,6 +52,7 @@ returns given input is WebP or not
 
 returns given input is WebP or not
 
+
 ## Changelog
 
 #### 1.0.0
@@ -62,11 +66,16 @@ returns given input is WebP or not
 $ npm run test
 ```
 
+
 ## Build
 
 ```bash
 $ npm run build
 ```
+
+## Related
+
+- [sindresorhus/is-webp](https://github.com/sindresorhus/is-webp) - Check if a Buffer/Uint8Array is a WebP image
 
 
 ## License
