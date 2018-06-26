@@ -7,7 +7,7 @@ registerSuite("is-webp-extended", {
     await this.remote
       .get("test.html")
       .findById("input")
-      .type(path.resolve("fixture.webp"))
+      .type(path.join(__dirname, path.resolve("fixture.webp")))
       .end()
       .sleep(5000);
 
