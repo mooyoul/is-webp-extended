@@ -7,7 +7,9 @@
       "chromeOptions": {
         "args": [
           "headless",
-          "disable-gpu"
+          "disable-gpu",
+          "no-sandbox",
+          "disable-dev-shm-usage"
         ]
       },
       "fixSessionCapabilities": false
