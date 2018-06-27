@@ -76,7 +76,7 @@ $ npm run build
 ## Related
 
 - [sindresorhus/is-webp](https://github.com/sindresorhus/is-webp) - Check if a Buffer/Uint8Array is a WebP image
-
+- [mooyoul/node-webpinfo](https://github.com/mooyoul/node-webpinfo) - Strongly typed, Stream based WebP Container Parser
 
 ## License
 [MIT](LICENSE)
