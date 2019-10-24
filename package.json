@@ -4,6 +4,11 @@
   "description": "Extended version of is-webp package which supports Animated WebP",
   "main": "index.js",
   "types": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "index.js.map"
+  ],
   "dependencies": {},
   "devDependencies": {
     "@vingle/commitlint-preset": "1.0.3",
