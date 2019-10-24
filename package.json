@@ -6,8 +6,11 @@
   "types": "index.d.ts",
   "dependencies": {},
   "devDependencies": {
+    "@vingle/commitlint-preset": "1.0.3",
+    "@vingle/semantic-release-config": "1.0.3",
     "@vingle/tslint-preset": "1.0.0",
     "browserstack-local": "1.4.2",
+    "husky": "3.0.9",
     "intern": "4.5.0",
     "rollup": "1.25.2",
     "rollup-plugin-typescript2": "0.24.3",
@@ -35,5 +38,20 @@
   "bugs": {
     "url": "https://github.com/mooyoul/is-webp-extended/issues"
   },
-  "homepage": "https://github.com/mooyoul/is-webp-extended#readme"
+  "homepage": "https://github.com/mooyoul/is-webp-extended#readme",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@vingle/commitlint-preset"
+    ]
+  }
 }
