@@ -25,7 +25,7 @@ https://mooyoul.github.com/is-webp-extended/
 #### from NPM
 
 ```bash
-$ npm install is-webp-info
+$ npm install is-webp-extended --save
 
 ```
 
@@ -52,7 +52,7 @@ returns given input is WebP or not
 
 ### `isAnimatedWebP(input: ArrayBuffer | File)` => `Promise<boolean>`
 
-returns given input is WebP or not
+returns given input is Animated WebP or not
 
 
 ## Changelog
