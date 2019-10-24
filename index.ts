@@ -10,7 +10,7 @@ const ANMF = new Uint8Array([
   0x41, 0x4e, 0x4d, 0x46,
 ]);
 
-export async function isWebP(input: ArrayBuffer | File) {
+export async function isWebP(input: ArrayBuffer | Blob) {
   const chunk = await readBytes(input, 0, 12);
   const buf = new Uint8Array(chunk);
 
@@ -42,8 +42,8 @@ export async function isAnimatedWebP(input: ArrayBuffer | File) {
   return false;
 }
 
-function readBytes(input: File | ArrayBuffer, offset: number, size: number): Promise<ArrayBuffer> {
-  if (input instanceof File) {
+function readBytes(input: Blob | ArrayBuffer, offset: number, size: number): Promise<ArrayBuffer> {
+  if (input instanceof Blob) {
     return new Promise<ArrayBuffer>((resolve, reject) => {
       const reader = new FileReader();
       reader.onerror = (e) => {
@@ -68,8 +68,8 @@ function readBytes(input: File | ArrayBuffer, offset: number, size: number): Pro
   return Promise.resolve(input.slice(offset, offset + size));
 }
 
-function getSize(input: File | ArrayBuffer) {
-  return input instanceof File ?
+function getSize(input: Blob | ArrayBuffer) {
+  return input instanceof Blob ?
     input.size :
     input.byteLength;
 }
