@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/mooyoul/is-webp-extended/compare/v1.0.2...v1.0.3) (2019-10-27)
+
+
+### Bug Fixes
+
+* fix typing ([887f416](https://github.com/mooyoul/is-webp-extended/commit/887f41684d9f1186f3871839edf709be2c718a91))
+
 ## [1.0.2](https://github.com/mooyoul/is-webp-extended/compare/v1.0.1...v1.0.2) (2019-10-24)
 
 

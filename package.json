@@ -1,6 +1,6 @@
 {
   "name": "is-webp-extended",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Extended version of is-webp package which supports Animated WebP",
   "main": "index.js",
   "types": "index.d.ts",
