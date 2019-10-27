@@ -18,7 +18,7 @@ export async function isWebP(input: ArrayBuffer | Blob) {
     isEqual(WEBP, buf.slice(8, 12));
 }
 
-export async function isAnimatedWebP(input: ArrayBuffer | File) {
+export async function isAnimatedWebP(input: ArrayBuffer | Blob) {
   if (await isWebP(input) === false) {
     return false;
   }
