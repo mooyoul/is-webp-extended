@@ -16,7 +16,7 @@
     "@vingle/tslint-preset": "1.0.0",
     "browserstack-local": "1.4.2",
     "husky": "3.1.0",
-    "intern": "4.6.0",
+    "intern": "4.7.0",
     "rollup": "1.27.8",
     "rollup-plugin-typescript2": "0.25.3",
     "tslint": "5.20.1",
