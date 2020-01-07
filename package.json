@@ -20,7 +20,7 @@
     "rollup": "1.28.0",
     "rollup-plugin-typescript2": "0.25.3",
     "tslint": "5.20.1",
-    "typescript": "3.7.3"
+    "typescript": "3.7.4"
   },
   "scripts": {
     "clean": "rm -f index.d.ts index.js index.js.map",
