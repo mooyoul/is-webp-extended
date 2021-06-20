@@ -14,14 +14,16 @@
     "@prescott/commitlint-preset": "1.0.2",
     "@prescott/semantic-release-config": "1.0.1",
     "@prescott/tslint-preset": "1.0.1",
-    "browserstack-local": "1.4.3",
-    "husky": "3.1.0",
-    "intern": "4.7.1",
-    "rollup": "1.29.0",
-    "rollup-plugin-typescript2": "0.25.3",
+    "@rollup/plugin-commonjs": "19.0.0",
+    "@rollup/plugin-node-resolve": "13.0.0",
+    "@rollup/plugin-typescript": "8.2.1",
+    "browserstack-local": "1.4.8",
+    "husky": "6.0.0",
+    "intern": "4.9.1",
+    "rollup": "2.52.1",
     "semantic-release": "17.4.4",
-    "tslint": "5.20.1",
-    "typescript": "3.7.4"
+    "tslint": "6.1.3",
+    "typescript": "4.3.4"
   },
   "scripts": {
     "clean": "rm -f index.d.ts index.js index.js.map",
