@@ -18,7 +18,7 @@ If `File` is provided, package automatically handles additional requirements lik
 
 ## Demo
 
-https://mooyoul.github.com/is-webp-extended/
+https://mooyoul.github.io/is-webp-extended/
 
 ## Install
 
