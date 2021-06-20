@@ -14,7 +14,7 @@ If `File` is provided, package automatically handles additional requirements lik
 
 ## Sponsor
 
-- [CATCH](https://www.catchfashion.com/women) - 캐치패션 - 세상 쉬운 명품 직구 - [We're hiring!](https://careers.vingle.net/#/engineering/backend)
+- [CATCH](https://www.catchfashion.com/women) - 캐치패션 - 세상 쉬운 명품 직구 - [We're hiring!](https://www.wanted.co.kr/company/2378)
 
 ## Demo
 
