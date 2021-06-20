@@ -17,7 +17,7 @@ jobs:
       - name: Build
         run: npm run build
       - name: Test
-        run: npm run test:spec
+        run: npm test
       - name: Publish
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: npx semantic-release
