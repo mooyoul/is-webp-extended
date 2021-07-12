@@ -19,7 +19,7 @@
     "@rollup/plugin-typescript": "8.2.1",
     "browserstack-local": "1.4.8",
     "husky": "7.0.1",
-    "intern": "4.9.1",
+    "intern": "4.10.0",
     "rollup": "2.53.1",
     "semantic-release": "17.4.4",
     "tslint": "6.1.3",
