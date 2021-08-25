@@ -18,7 +18,7 @@
     "@rollup/plugin-node-resolve": "13.0.4",
     "@rollup/plugin-typescript": "8.2.5",
     "browserstack-local": "1.4.8",
-    "husky": "7.0.1",
+    "husky": "7.0.2",
     "intern": "4.10.0",
     "rollup": "2.56.3",
     "semantic-release": "17.4.6",
