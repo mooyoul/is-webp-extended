@@ -17,7 +17,7 @@
     "@rollup/plugin-commonjs": "22.0.0",
     "@rollup/plugin-node-resolve": "13.3.0",
     "@rollup/plugin-typescript": "8.3.2",
-    "browserstack-local": "1.4.9",
+    "browserstack-local": "1.5.0",
     "husky": "7.0.4",
     "intern": "4.10.1",
     "rollup": "2.71.1",
